@@ -20,6 +20,7 @@ config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
   enable_starttls_auto:  true,
   } 
   
+
   config.cache_classes = false
 
   # Do not eager load code on boot.
