@@ -17,9 +17,9 @@ private
   # end
 
   # GET /resource/confirmation?confirmation_token=abcdef
-  # def show
-  #   super
-  # end
+   # def show
+   #   super
+   # end
 
   # protected
 

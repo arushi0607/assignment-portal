@@ -1,4 +1,4 @@
-class [users]::SessionsController < Devise::SessionsController
+class Users::SessionsController < Devise::SessionsController
 # before_action :configure_sign_in_params, only: [:create]
 
   # GET /resource/sign_in
@@ -15,6 +15,8 @@ class [users]::SessionsController < Devise::SessionsController
   # def destroy
   #   super
   # end
+
+  
 
   # protected
 

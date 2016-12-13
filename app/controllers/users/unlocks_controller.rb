@@ -1,4 +1,4 @@
-class [users]::UnlocksController < Devise::UnlocksController
+class Users::UnlocksController < Devise::UnlocksController
   # GET /resource/unlock/new
   # def new
   #   super
@@ -10,9 +10,9 @@ class [users]::UnlocksController < Devise::UnlocksController
   # end
 
   # GET /resource/unlock?unlock_token=abcdef
-  # def show
-  #   super
-  # end
+   # def show
+   #   super
+   # end
 
   # protected
 
