@@ -1,6 +1,7 @@
 class ProjectsController < ApplicationController
   before_action :set_project, only: [:show, :edit, :update, :destroy]
-
+  before_filter :authenticate_user! ,only: [:new, :edit, :show, :destroy], alert: 'you must sign in first!'
+  before_filter :is_authorised? , only: [:edit, :update, :destroy]
   # GET /projects
   # GET /projects.json
   def index
@@ -67,6 +68,15 @@ print @project.user_id
     # Use callbacks to share common setup or constraints between actions.
     def set_project
       @project = Project.find(params[:id])
+    end
+
+    def is_authorised?
+      if current_user == @project.user
+        true
+      else
+        redirect_to '/projects' , alert: "You are not allowed to make changes!"
+        return
+      end
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
