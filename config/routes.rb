@@ -8,7 +8,13 @@ Rails.application.routes.draw do
     delete 'sign_out', :to => 'devise/sessions#destroy', :as => :destroy_user
   end
 
+  root 'user#index'
+
   get 'user'=>"user#show"
+  get 'welcome'=>'user#welcome'
+  get 'user/ongoing'=>"user#user_ongoing"
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

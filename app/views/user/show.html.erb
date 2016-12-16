@@ -1,11 +1,14 @@
-<h4>Uername:</h4>
+<h4>Uername:<%= current_user.username %></h4>
 <h4>Rating</h4>
 
 
 <p id="notice"><%= notice %></p>
-<%= link_to 'Ongoing', user_path %> <br>
+<%= link_to 'Ongoing', user_ongoing_path %> <br>
 <%= link_to 'Completed', user_path %> <br>
 <%= link_to 'Posted', user_path %> <br>
-
+<%= link_to 'New Project', new_project_path %><br>
 <%= link_to 'Edit', edit_user_registration_path%> |
-<%= link_to 'Back', user_path %>
+<%= link_to 'Back', projects_path %>
+
+
+
